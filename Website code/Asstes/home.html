@@ -7,46 +7,38 @@
   <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="meny.html">Meny</a></li>
-        <li><a href="order.html">Bestill</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="home">
-      <h1>Velkommen til vår kafé</h1>
-      <p>Oppdag vår deilige meny og bestill direkte fra mobilen.</p>
-    </section>
-    <section id="menu">
-      <h2>Meny</h2>
-      <ul id="menu-list">
-        <!-- Menyelementer vil bli lagt til her dynamisk -->
-      </ul>
-    </section>
-    <section id="order">
-      <h2>Din Bestilling</h2>
-      <ul id="order-list">
-        <!-- Bestillingsliste vil bli lagt til her -->
-      </ul>
-      <button id="submit-order">Send Bestilling</button>
-    </section>
-    <section id="contact">
-      <h2>Kontakt Oss</h2>
-      <p>Adresse: Eksempelgate 123, 7010 Trondheim</p>
-      <p>Telefon: 123 45 678</p>
-      <div id="map">
-        <!-- Google Maps-kart vil bli integrert her -->
+  <div class="hero">
+    <header>
+      <div class="logo-container">
+        <img src="logo.png" alt="Min Kafé Logo">
       </div>
-    </section>
-  </main>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <h1>Velkommen til vår kafé</h1>
+        <p>Oppdag vår deilige meny og bestill direkte fra mobilen.</p>
+      </section>
+
+      <section class="nav-boxes">
+        <a href="meny.html" class="nav-box">
+          <img src="meny.jpg" alt="Meny">
+          <h2>Meny</h2>
+        </a>
+        <a href="order.html" class="nav-box">
+          <img src="bestill.jpg" alt="Bestill">
+          <h2>Bestill</h2>
+        </a>
+        <a href="kontakt.html" class="nav-box">
+          <img src="kontakt.jpg" alt="Kontakt">
+          <h2>Kontakt</h2>
+        </a>
+      </section>
+    </main>
+  </div>
+
   <footer>
     <p>&copy; 2025 Min Kafé</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
