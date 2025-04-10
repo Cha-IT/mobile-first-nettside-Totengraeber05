@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestill</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Hjem</a></li>
+        <li><a href="meny.html">Meny</a></li>
+        <li><a href="order.html">Bestill</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="order-section">
+      <h1>Bestill Mat og Drikke</h1>
+      <button id="show-menu-button">Vis Meny</button>
+      <div id="menu-box" class="hidden">
+        <h2>Velg fra menyen</h2>
+        <ul id="menu-options">
+          <!-- Alternativer vil bli lagt til via JavaScript -->
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Min Kafé</p>
+  </footer>
+  <script>
+    const meny = [
+      { navn: "Kaffe", pris: "30 kr" },
+      { navn: "Latte", pris: "35 kr" },
+      { navn: "Croissant", pris: "25 kr" },
+      { navn: "Sandwich", pris: "50 kr" }
+    ];
+
+    const showBtn = document.getElementById('show-menu-button');
+    const menuBox = document.getElementById('menu-box');
+    const menuOptions = document.getElementById('menu-options');
+
+    showBtn.addEventListener('click', () => {
+      // Toggle visibility
+      menuBox.classList.toggle('hidden');
+      
+      // Only populate once
+      if (menuOptions.children.length === 0) {
+        meny.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = `${item.navn} - ${item.pris}`;
+          menuOptions.appendChild(li);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
